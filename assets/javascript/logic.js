@@ -5,47 +5,52 @@
 // 1. display rating
 // 2.Play animation on Click
 // 3.add a search term and append new string
-// 4. 
 
 
 
 $(document).ready(function(){
     for( i=0; i< topics.length; i++){
-        var topicsadd = $(".button-add").append("<button type='button' class='btn btn-dark array-list gif' id='"+topics[i]+"' >"+ topics[i]+"</button>")
+        var topicsadd = $(".button-add").append("<button type='button' class='btn btn-dark array-list' name='search-term' id='"+topics[i]+"' >"+ topics[i]+"</button>")
         topicsadd
     }
 })
 
 
 $(".btn-outline-dark").click(function(){
+    event.preventDefault()
     var searchvalue = $("input:text").val();
-    var buttonadd = $(".button-add").append("<button type='button' class='btn btn-dark array-list'>"+ searchvalue+"</button>")
+    var buttonadd = $(".button-add").append("<button type='button' class='btn btn-dark array-list' name='search-term'>"+ searchvalue+"</button>")
     buttonadd
-    console.log($("input:text").val())
+    $("#searchVal").empty()
+    
 })
 var usertyped = $("input:text").val()
-// // Need Help below
-var searchTerm = "spongebob"
+
+
 $(".button-add").on("click",function(){
+    var searchvalue = $(event.target).text()
+
+    console.log(searchvalue)
+   
 
 
-    event.preventDefault()
+
+    // event.preventDefault()
 var APIKey = "fi6P2HJpI6tlPq7b1fupGzo8PFi1AYXA"  
-var QueryUrl = "https://api.giphy.com/v1/gifs/search?api_key="+ APIKey+"&q="+ searchTerm+"&limit=10&offset=0&rating=G&lang=en"
+var QueryUrl = "https://api.giphy.com/v1/gifs/search?api_key="+ APIKey+"&q="+ searchvalue+"&limit=15&offset=0&rating=G&lang=en"
 // AJAX Call Below
 $.ajax({
     url: QueryUrl,
     method: 'GET'
 }).then(function (result) {
+    $(".gif-holder").empty()
     
-    
-    // searchTerm filler: $(this).text()
     
     
     console.log(result)
     
     
-    for (j = 1; j < 10; j++) {
+    for (j = 1; j < 11; j++) {
         // Parameter Variables:
         var gifrate = "Rating: "+ result.data[j].rating
         var bootcard ="<div class='card' style='width: 18rem;'><img class='card-img-top' data-state="+state+" data-still="+stillurl+" data-animate="+animatedurl+"  src=" +stillurl+ " alt='Card image cap'><div class='card-body'><p class='card-text'>"+gifrate+" </p></div></div>"        
@@ -68,6 +73,7 @@ $.ajax({
             
         }
     })
+    console.log(result)
             
 }).catch(function(err){
 console.error(err);
