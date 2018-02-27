@@ -23,7 +23,7 @@ $(document).ready(function(){
 $(".btn-outline-dark").click(function(){
     event.preventDefault()
     var searchvalue = $("input:text").val();
-    var buttonadd = $(".button-add").append("<button type='button' class='btn btn-dark array-list' name='search-term'>"+ searchvalue+"</button>")
+    var buttonadd = $(".button-add").append("<button type='button' class='btn btn-secondary array-list' name='search-term'>"+ searchvalue+"</button>")
     buttonadd
     $("#searchVal").val("")
     
