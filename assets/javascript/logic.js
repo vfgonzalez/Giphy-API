@@ -11,7 +11,7 @@
 $(document).ready(function(){
     var topics = [
         "Jedi", "Morty", "Nacho Libre", "Star Wars", "Drifting",
-        "The Office", "Big Bang Theory", "Soccer"    
+        "The Office", "Big Bang Theory", "Soccer", "Takeshi's Castle","Friends",
     ]
     for( i=0; i< topics.length; i++){
         var topicsadd = $(".button-add").append("<button type='button' class='btn btn-dark array-list' name='search-term' id='"+topics[i]+"' >"+ topics[i]+"</button>")
@@ -25,7 +25,7 @@ $(".btn-outline-dark").click(function(){
     var searchvalue = $("input:text").val();
     var buttonadd = $(".button-add").append("<button type='button' class='btn btn-dark array-list' name='search-term'>"+ searchvalue+"</button>")
     buttonadd
-    $("#searchVal").empty()
+    $("#searchVal").val("")
     
 })
 var usertyped = $("input:text").val()
