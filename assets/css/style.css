@@ -4,3 +4,6 @@
 .card{
     display: inline-flex;
 }
+.btn-group{
+    padding:10px 30px
+}
