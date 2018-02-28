@@ -11,16 +11,18 @@
 $(document).ready(function(){
     var topics = [
         "Jedi", "Morty", "Nacho Libre", "Star Wars", "Drifting",
-        "The Office", "Big Bang Theory", "Soccer", "Takeshi's Castle","Friends",
+        "The Office", "Big Bang Theory", "Soccer", "Takeshi's Castle","Friends","That 70's Show"
     ]
+
+    
+    
     for( i=0; i< topics.length; i++){
         var topicsadd = $(".button-add").append("<button type='button' class='btn btn-dark array-list' name='search-term' id='"+topics[i]+"' >"+ topics[i]+"</button>")
         topicsadd
     }
 
 
-
-$(".btn-outline-dark").click(function(){
+$(".btn-outline-light").click(function(){
     event.preventDefault()
     var searchvalue = $("input:text").val();
     var buttonadd = $(".button-add").append("<button type='button' class='btn btn-secondary array-list' name='search-term'>"+ searchvalue+"</button>")
@@ -63,7 +65,8 @@ $.ajax({
         var bootcard ="<div class='card' style='width: 18rem;'><img class='card-img-top' data-state="+state+" data-still="+stillurl+" data-animate="+animatedurl+"  src=" +stillurl+ " alt='Card image cap'><div class='card-body'><p class='card-text'>"+gifrate+" </p></div></div>"        
         $(".gif-holder").append(bootcard)
         
-    }   
+    } 
+  
     $(".card-img-top").on("click",function(){
         if($(this).attr("data-state") === "still"){
             console.log("true")
@@ -77,6 +80,7 @@ $.ajax({
             
         }
     })
+   
             
 }).catch(function(err){
 console.error(err);
