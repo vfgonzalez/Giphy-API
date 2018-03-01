@@ -11,7 +11,7 @@
 $(document).ready(function(){
     var topics = [
         "Jedi", "Morty", "Nacho Libre", "Star Wars", "Drifting",
-        "The Office", "Big Bang Theory", "Soccer", "Takeshi's Castle","Friends","That 70's Show"
+        "The Office", "Big Bang Theory", "Soccer", "Takeshi's Castle","Friends","That 70's Show","Ricky Bobby"
     ]
 
     
