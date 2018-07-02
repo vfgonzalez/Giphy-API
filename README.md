@@ -2,7 +2,7 @@
 
 Fun application to search your favorite Gifs!
 
-##Screenshots##
+**Screenshots**
 
 **Landing Page**
 
