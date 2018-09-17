@@ -2,9 +2,18 @@
 
 Fun application to search your favorite Gifs!
 
+### Sole Developer
+
+**Tech Used**
+-jQuery
+-HTML
+-CSS
+-Giphy API
+
+
 **Screenshots**
 
-**Landing Page**
+
 
 ![Login Page](./assets/images/landing.png "Home Page")
 
