@@ -5,10 +5,12 @@ Fun application to search your favorite Gifs!
 ### Sole Developer
 
 **Tech Used**
--jQuery
--HTML
--CSS
--Giphy API
+
+- HTML
+- CSS
+- JavaScript
+- jQuery
+- Giphy API
 
 
 **Screenshots**
